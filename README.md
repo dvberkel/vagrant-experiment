@@ -31,3 +31,16 @@ Everytime I work on this project I execute the command below.
 
     > rvm use 1.9.2@vagrant
 
+Setup
+-----
+
+To use this virtual box issue the following commands.
+
+    > vagrant box add lucid32 http://files.vagrantup.com/lucid32.box
+
+This will download a *base image* as described in the
+[walkthrough](http://vagrantup.com/docs/getting-started/boxes.html "Vagrant Walkthrough at Boxes").
+
+    > vagrant up
+
+This should provision a working virtual machine as specified in the Vagrantfile.
