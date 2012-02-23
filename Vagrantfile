@@ -62,14 +62,17 @@ Vagrant::Config.run do |config|
   # Enable provisioning with chef solo, specifying a cookbooks path (relative
   # to this Vagrantfile), and adding some recipes and/or roles.
   #
-  # config.vm.provision :chef_solo do |chef|
+  config.vm.provision :chef_solo do |chef|
+    chef.recipe_url = "http://files.vagrantup.com/getting_started/cookbooks.tar.gz"
+    
+    chef.add_recipe "vagrant_main"
   #   chef.cookbooks_path = "cookbooks"
   #   chef.add_recipe "mysql"
   #   chef.add_role "web"
   #
   #   # You may also specify custom JSON attributes:
   #   chef.json = { :mysql_password => "foo" }
-  # end
+  end
 
   # Enable provisioning with chef server, specifying the chef server URL,
   # and the path to the validation key (relative to this Vagrantfile).
